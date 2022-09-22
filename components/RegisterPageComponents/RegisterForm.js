@@ -55,7 +55,7 @@ const RegisterForm = () => {
       <div className="register-form section">
          <div className="container">
             <div className="head py-1">
-               <h4>S-SHOP</h4>
+               <h4>S-SHOP Admin</h4>
             </div>
             <div className="intro">
                <p className="lead">
