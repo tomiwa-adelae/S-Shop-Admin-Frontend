@@ -1,7 +1,6 @@
-import React from 'react';
+import BackBtn from '../components/BackBtn';
 import AllProducts from '../components/AllProductspageComponents/AllProducts';
 import AllProductsIntro from '../components/AllProductspageComponents/AllProductsIntro';
-import BackBtn from '../components/BackBtn';
 
 const allproducts = () => {
    return (
