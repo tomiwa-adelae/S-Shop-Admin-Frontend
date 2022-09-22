@@ -51,7 +51,7 @@ const OrderDetailsItems = ({ orderDetails }) => {
                               }
                               className="btn btn-grey my-0"
                            >
-                              See seller's details
+                              See seller details
                            </button>
                         </div>
                         <div className="col-two p-0">

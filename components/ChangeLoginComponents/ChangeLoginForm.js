@@ -36,7 +36,7 @@ const ChangeLoginForm = () => {
 
    useEffect(() => {
       dispatch({ type: CHANGE_USER_LOGIN_RESET });
-   }, []);
+   }, [dispatch]);
 
    const handleSubmit = (e) => {
       e.preventDefault();

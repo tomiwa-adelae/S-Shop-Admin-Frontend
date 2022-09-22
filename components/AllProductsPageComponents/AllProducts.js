@@ -32,7 +32,7 @@ const AllProducts = () => {
       if (keyword === '') {
          dispatch(getProducts());
       }
-   }, [dispatch, user, router]);
+   }, [dispatch, keyword, user, router]);
 
    const handleSearch = (e) => {
       setKeyword(e.target.value);

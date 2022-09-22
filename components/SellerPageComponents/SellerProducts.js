@@ -11,7 +11,7 @@ const SellerProducts = ({ products }) => {
          <div className="container">
             <div className="head py-1">
                <h5>
-                  All {seller?.firstName}'s products{' '}
+                  All {seller?.firstName} products{' '}
                   <span className="text-secondary">({products?.length})</span>
                </h5>
             </div>

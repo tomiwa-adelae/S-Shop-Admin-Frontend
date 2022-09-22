@@ -33,7 +33,7 @@ const PersonalDetailsForm = () => {
 
    useEffect(() => {
       dispatch({ type: UPDATE_USER_DETAILS_RESET });
-   }, []);
+   }, [dispatch]);
 
    const handleSubmit = (e) => {
       e.preventDefault();

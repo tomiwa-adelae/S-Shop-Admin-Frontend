@@ -32,7 +32,7 @@ const AllSellersList = () => {
       if (keyword === '') {
          dispatch(getSellers());
       }
-   }, [dispatch, user, router]);
+   }, [dispatch, keyword, user, router]);
 
    const handleSearch = (e) => {
       setKeyword(e.target.value);
