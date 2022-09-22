@@ -1,0 +1,22 @@
+.all-sellers-page {
+   .all-sellers-list {
+      .wrapper {
+         .boxes {
+            .box {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               flex-wrap: wrap;
+               background-color: $primary-color;
+               color: $white-color;
+
+               div {
+                  button {
+                     width: 100%;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

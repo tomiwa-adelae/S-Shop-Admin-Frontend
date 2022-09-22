@@ -1,0 +1,734 @@
+img {
+   width: 100%;
+   height: 100%;
+}
+
+.page {
+   min-height: 70vh;
+}
+
+a {
+   color: $white-color;
+   text-decoration: none;
+}
+
+.container {
+   width: 85%;
+   margin: auto;
+}
+
+// Padding
+.py-0 {
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+}
+
+.py-1 {
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+
+.py-2 {
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+}
+
+.py-3 {
+   padding-top: 3rem;
+   padding-bottom: 3rem;
+}
+
+.py-4 {
+   padding-top: 4rem;
+   padding-bottom: 4rem;
+}
+
+.px-0 {
+   padding-right: 0.5rem;
+   padding-left: 0.5rem;
+}
+
+.px-1 {
+   padding-right: 1rem;
+   padding-left: 1rem;
+}
+
+.px-2 {
+   padding-right: 2rem;
+   padding-left: 2rem;
+}
+
+.px-3 {
+   padding-right: 3rem;
+   padding-left: 3rem;
+}
+
+.px-4 {
+   padding-right: 4rem;
+   padding-left: 4rem;
+}
+
+.p-0 {
+   padding: 0.5rem;
+}
+
+.p-1 {
+   padding: 1rem;
+}
+
+.p-2 {
+   padding: 2rem;
+}
+
+.p-3 {
+   padding: 3rem;
+}
+
+.p-4 {
+   padding: 4rem;
+}
+
+// Margin
+.my-0 {
+   margin-top: 0.5rem;
+   margin-bottom: 0.5rem;
+}
+
+.my-1 {
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+.my-2 {
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+
+.my-3 {
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+}
+
+.my-4 {
+   margin-top: 4rem;
+   margin-bottom: 4rem;
+}
+
+.mx-0 {
+   margin-right: 0.5rem;
+   margin-left: 0.5rem;
+}
+
+.mx-1 {
+   margin-right: 1rem;
+   margin-left: 1rem;
+}
+
+.mx-2 {
+   margin-right: 2rem;
+   margin-left: 2rem;
+}
+
+.mx-3 {
+   margin-right: 3rem;
+   margin-left: 3rem;
+}
+
+.mx-4 {
+   margin-right: 4rem;
+   margin-left: 4rem;
+}
+
+.m-0 {
+   margin: 0.5rem;
+}
+
+.m-1 {
+   margin: 1rem;
+}
+
+.m-2 {
+   margin: 2rem;
+}
+
+.m-3 {
+   margin: 3rem;
+}
+
+.m-4 {
+   margin: 4rem;
+}
+
+@mixin easeOut {
+   transition: all ease 0.5s;
+}
+
+// Font Sizes
+h1 {
+   font-size: 4.5rem;
+}
+
+h2 {
+   font-size: 3.5rem;
+}
+
+h3 {
+   font-size: 2.5rem;
+}
+
+h4 {
+   font-size: 1.5rem;
+}
+
+h5 {
+   font-size: 1rem;
+}
+
+h6 {
+   font-size: 0.8rem;
+}
+
+// Buttons
+.btn {
+   padding: 0.8rem 1rem;
+   font-size: 0.8rem;
+   border: none;
+   outline: none;
+   text-transform: uppercase;
+   cursor: pointer;
+   text-align: center;
+   font-weight: bolder;
+   @include easeOut();
+
+   &-primary {
+      background-color: $primary-color;
+      color: $white-color;
+
+      &:hover {
+         background-color: darken($primary-color, 5%);
+      }
+   }
+
+   &-white {
+      background-color: $white-color;
+      color: $primary-color;
+
+      &:hover {
+         background-color: darken($white-color, 10%);
+      }
+   }
+
+   &-secondary {
+      background-color: $secondary-color;
+      color: $white-color;
+
+      &:hover {
+         background-color: darken($secondary-color, 10%);
+      }
+   }
+
+   &-grey {
+      background-color: $grey-color;
+      color: $white-color;
+
+      &:hover {
+         background-color: darken($grey-color, 10%);
+      }
+   }
+
+   &-outline-danger {
+      background-color: transparent;
+      border: 1px solid $danger-color;
+      color: $white-color;
+
+      &:hover {
+         background-color: $danger-color;
+      }
+   }
+
+   &-danger {
+      background-color: $danger-color;
+      color: $white-color;
+
+      &:hover {
+         background-color: darken($danger-color, 10%);
+      }
+   }
+
+   &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+   }
+}
+
+.lead {
+   font-size: 16px;
+   font-weight: bold;
+}
+
+// Form
+form {
+   div {
+      input,
+      textarea,
+      select {
+         padding: 0.8rem 1rem;
+         margin: 0.5rem 0;
+         font-size: 0.8rem;
+         border: none;
+         outline: none;
+         width: 100%;
+         font-weight: bold;
+      }
+
+      select {
+         cursor: pointer;
+         text-transform: uppercase;
+
+         option {
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+         }
+      }
+
+      label {
+         padding: 0.8rem 0;
+         margin: 0.5rem 0;
+         font-size: 0.8rem;
+         border: none;
+         outline: none;
+         width: 100%;
+         font-weight: bold;
+      }
+   }
+
+   .password {
+      position: relative;
+
+      span {
+         cursor: pointer;
+         position: absolute;
+         top: 50%;
+         right: 1%;
+         transform: translate(-1%, -50%);
+      }
+   }
+
+   .checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      label {
+         width: inherit;
+         display: inline-block;
+         margin-left: 1rem;
+         cursor: pointer;
+      }
+
+      input {
+         width: inherit;
+         display: inline-block;
+         cursor: pointer;
+      }
+
+      input:focus {
+         outline: none;
+      }
+   }
+}
+
+select {
+   padding: 0.8rem 1rem;
+   margin: 0.5rem 0;
+   font-size: 0.8rem;
+   border: none;
+   outline: none;
+   width: 100%;
+   font-weight: bold;
+}
+
+select {
+   cursor: pointer;
+}
+
+// Text colors
+.text-primary {
+   color: $primary-color;
+}
+
+.text-secondary {
+   color: $secondary-color;
+}
+
+.text-danger {
+   color: $danger-color;
+}
+
+.text-grey {
+   color: $grey-color;
+}
+
+.spinner-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+
+   .spinner-primary {
+      margin: 0;
+      width: 5rem;
+      height: 5rem;
+      border: 3px solid rgba($grey-color, 1);
+      border-radius: 50%;
+      border-top-color: $secondary-color;
+      border-right-color: $secondary-color;
+      animation: spinner 2s linear infinite;
+      margin: 1rem 0;
+   }
+
+   .spinner-white {
+      margin: 0;
+      width: 5rem;
+      height: 5rem;
+      border: 3px solid rgba($primary-color, 1);
+      border-radius: 50%;
+      border-top-color: $white-color;
+      border-right-color: $white-color;
+      animation: spinner 2s linear infinite;
+      margin: 1rem 0;
+   }
+
+   .spinner-white-small {
+      margin: 0;
+      width: 2rem;
+      height: 2rem;
+      border: 3px solid rgba($grey-color, 1);
+      border-radius: 50%;
+      border-top-color: $white-color;
+      border-right-color: $white-color;
+      animation: spinner 2s linear infinite;
+      margin: 1rem 0;
+   }
+}
+
+@keyframes spinner {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+// Rating
+.rating {
+   span {
+      margin: 0.1rem;
+      i {
+         color: $secondary-color;
+      }
+   }
+}
+
+.links-tags {
+   text-transform: uppercase;
+
+   span {
+      cursor: pointer;
+      @include easeOut();
+
+      &:hover {
+         color: $secondary-color;
+         font-weight: bold;
+      }
+   }
+}
+
+.section {
+   padding: 2rem 0;
+}
+
+.upload-modal {
+   border: 2px dotted $primary-color;
+   height: 4rem;
+   color: $primary-color;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   margin-bottom: 0.5rem;
+   border-radius: 5px;
+   @include easeOut();
+}
+
+.modal-active {
+   border: 2px dotted $secondary-color;
+   font-weight: bold;
+   height: 4rem;
+   color: $secondary-color;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   margin-bottom: 0.5rem;
+   border-radius: 5px;
+}
+
+.preview-file {
+   div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+
+      img {
+         width: 100px;
+         object-fit: cover;
+         height: 100px;
+         margin-right: 1rem;
+         border-radius: 100%;
+      }
+   }
+
+   span {
+      display: inline-block;
+   }
+}
+
+.success-msg {
+   background-color: $secondary-color;
+   color: $white-color;
+   width: 100%;
+   text-transform: uppercase;
+}
+
+.primary-msg {
+   background-color: $primary-color;
+   color: $white-color;
+   width: 100%;
+   text-transform: uppercase;
+}
+
+.danger-msg {
+   background-color: $danger-color;
+   color: $white-color;
+   width: 100%;
+   text-transform: uppercase;
+}
+
+.search-box {
+   form {
+      // background-color: orange;
+      div {
+         position: relative;
+         .search-icon {
+            color: $grey-color;
+            position: absolute;
+            top: 60%;
+            left: 1.5%;
+            transform: translate(-1.5%, -60%);
+         }
+         input {
+            border: 1px solid $grey-color;
+            padding-left: 2.5rem;
+         }
+
+         .btn {
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+            right: 0;
+         }
+      }
+   }
+}
+
+.notification-box {
+   background-color: $secondary-color;
+   color: $white-color;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.badge {
+   padding: 0.5rem 1rem;
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 10px;
+
+   &-secondary {
+      background-color: $secondary-color;
+      color: $white-color;
+   }
+
+   &-danger {
+      background-color: $danger-color;
+      color: $white-color;
+   }
+}
+
+.delete-modal {
+   background-color: rgba($primary-color, 0.7);
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 4;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   .content {
+      width: 70%;
+      background-color: $white-color;
+   }
+}
+
+.details-modal {
+   background-color: rgba($primary-color, 0.7);
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 4;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   .content {
+      width: 70%;
+      background-color: $white-color;
+
+      .img {
+         width: 100px;
+
+         img {
+            object-fit: cover;
+            height: 100px;
+            margin-right: 1rem;
+            border-radius: 100%;
+         }
+      }
+
+      button {
+         width: 100%;
+      }
+   }
+}
+
+.product-carousel {
+   height: 60vh;
+   background-color: $grey-color;
+   position: relative;
+   @include easeOut();
+
+   .box {
+      height: 60vh;
+      background-color: $grey-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .content {
+         display: flex;
+         align-items: center;
+         justify-content: space-around;
+         flex-wrap: wrap;
+         height: 100%;
+         text-align: center;
+         width: 85%;
+         margin: auto;
+         cursor: pointer;
+
+         .title {
+            text-transform: uppercase;
+            color: $white-color;
+         }
+
+         .img {
+            width: 300px;
+            height: 300px;
+
+            img {
+               border-radius: 100%;
+               object-fit: cover;
+               border: 2px solid $white-color;
+               background-color: $white-color;
+               @include easeOut();
+            }
+         }
+
+         &:hover {
+            .img {
+               img {
+                  border: 2px solid $secondary-color;
+               }
+            }
+         }
+      }
+   }
+   .icons {
+      border-radius: 200%;
+      opacity: 0;
+      z-index: 1;
+      color: $white-color;
+      font-size: 3rem;
+      cursor: pointer;
+      @include easeOut();
+
+      &:hover {
+         color: $primary-color;
+      }
+
+      &-left {
+         position: absolute;
+         left: 3%;
+         top: 50%;
+         transform: translate(-3%, -50%);
+      }
+
+      &-right {
+         position: absolute;
+         right: 3%;
+         top: 50%;
+         transform: translate(-3%, -50%);
+      }
+   }
+
+   &:hover {
+      .icons {
+         opacity: 1;
+      }
+   }
+}
+
+.loading-modal {
+   background-color: rgba($primary-color, 0.7);
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 4;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

@@ -1,0 +1,130 @@
+.order-page {
+   .order-intro {
+      background-color: $primary-color;
+      color: $white-color;
+   }
+
+   .order-items {
+      background-color: $grey-color;
+
+      .wrapper {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         flex-wrap: wrap;
+
+         .order {
+            background-color: $primary-color;
+            color: $white-color;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            .details {
+               flex-grow: 11;
+               display: flex;
+               align-items: flex-start;
+               justify-content: space-between;
+               flex-wrap: wrap;
+
+               .col-one {
+                  flex-grow: 1;
+
+                  .name {
+                     display: inline-block;
+                     cursor: pointer;
+                     @include easeOut();
+
+                     &:hover {
+                        color: $secondary-color;
+                     }
+                  }
+
+                  h6 {
+                     text-transform: uppercase;
+                  }
+               }
+
+               .col-two {
+                  span {
+                     display: block;
+                  }
+               }
+            }
+
+            .img {
+               flex-grow: 1;
+               width: 150px;
+               height: 100px;
+               img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+               }
+            }
+         }
+      }
+   }
+
+   .order-details-info {
+      background-color: $white-color;
+      .wrapper {
+         display: flex;
+         align-items: flex-start;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         gap: 1rem;
+
+         .info {
+            flex-grow: 1;
+            background-color: $primary-color;
+            color: $white-color;
+
+            .head {
+               h5 {
+                  text-transform: uppercase;
+               }
+            }
+
+            .boxes {
+               display: flex;
+               align-items: flex-start;
+               justify-content: flex-start;
+               flex-direction: column;
+
+               .box {
+                  background-color: $grey-color;
+                  width: 100%;
+
+                  h6,
+                  h5 {
+                     text-transform: uppercase;
+                  }
+
+                  div {
+                     button {
+                        width: 100%;
+                     }
+                  }
+               }
+            }
+         }
+
+         .shipping-info {
+            .boxes {
+               .box {
+                  h6 {
+                     text-align: center;
+                  }
+               }
+               button {
+                  width: 100%;
+               }
+            }
+         }
+      }
+   }
+}

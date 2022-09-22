@@ -1,0 +1,91 @@
+.dashboard-page {
+   .dashboard-showcase {
+      background-color: $white-color;
+      color: $primary-color;
+
+      .wrapper {
+         display: flex;
+         align-items: flex-end;
+         justify-content: space-evenly;
+         flex-wrap: wrap-reverse;
+         width: 100%;
+         gap: 1rem;
+
+         .details {
+            h3 {
+               text-transform: uppercase;
+            }
+
+            .btn {
+               width: inherit;
+               display: flex;
+               align-items: center;
+            }
+            h5 {
+               text-transform: capitalize;
+            }
+
+            .back-btn {
+               button {
+                  width: initial;
+               }
+            }
+
+            .back-btn.container {
+               width: 100%;
+            }
+         }
+
+         .img {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            img {
+               height: 100%;
+               width: 100%;
+               border-radius: 100%;
+               object-fit: cover;
+               border: 2px solid $primary-color;
+               background-color: $white-color;
+               @include easeOut();
+            }
+            h5 {
+               color: $secondary-color;
+               text-transform: capitalize;
+            }
+         }
+      }
+   }
+
+   .dashboard-info {
+      background-color: $primary-color;
+      color: $white-color;
+
+      .wrapper {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         gap: 1rem;
+
+         .box {
+            flex-grow: 1;
+            background-color: $grey-color;
+            cursor: pointer;
+
+            h4 {
+               text-transform: uppercase;
+            }
+         }
+
+         .logout {
+            background-color: $danger-color;
+            text-align: center;
+         }
+      }
+   }
+}

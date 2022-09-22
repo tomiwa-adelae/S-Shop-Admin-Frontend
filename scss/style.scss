@@ -1,0 +1,177 @@
+@import 'config';
+@import 'utilities';
+@import 'loginpage';
+@import 'registerpage';
+@import 'dashboardpage';
+@import 'allproductspage';
+@import 'productpage';
+@import 'alluserspage';
+@import 'allsellerspage';
+@import 'personaldetailspage';
+@import 'changeloginpage';
+@import 'allorderspage';
+@import 'orderpage';
+@import 'sellerpage';
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+}
+
+body {
+   font-size: 15px;
+   width: 100%;
+   height: 100%;
+   background-color: $white-color;
+   color: $primary-color;
+   line-height: 1.6;
+   position: relative;
+}
+
+header {
+   background-color: $primary-color;
+   color: $white-color;
+   padding: 0.5rem 0;
+   position: sticky;
+   top: 0;
+   z-index: 3;
+   border-bottom: 1px solid $white-color;
+
+   .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+      margin: 0 auto;
+      gap: 0 1rem;
+
+      .logo {
+         h3 {
+            cursor: pointer;
+
+            @include easeOut();
+
+            &:hover {
+               color: $secondary-color;
+            }
+         }
+      }
+
+      nav {
+         flex: 1;
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+
+         span {
+            cursor: pointer;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            @include easeOut();
+
+            span {
+               cursor: pointer;
+               text-transform: uppercase;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-weight: bold;
+               @include easeOut();
+               &:hover {
+                  color: $secondary-color;
+               }
+            }
+         }
+      }
+   }
+}
+
+// Footer
+footer {
+   background-color: darken($primary-color, 10%);
+   color: $white-color;
+
+   .footer-details {
+      background-color: $primary-color;
+
+      .wrapper {
+         display: flex;
+
+         align-items: flex-start;
+         justify-content: flex-start;
+         flex-wrap: wrap;
+         gap: 1rem;
+
+         .box {
+            flex-grow: 1;
+            width: 300px;
+
+            .head {
+               h5 {
+                  text-transform: uppercase;
+               }
+            }
+
+            .footer-links {
+               display: flex;
+               align-items: flex-start;
+               justify-content: flex-start;
+               flex-direction: column;
+               // padding: 1rem 0;
+
+               strong {
+                  cursor: pointer;
+
+                  font-weight: bold;
+                  @include easeOut();
+
+                  &:hover {
+                     color: $secondary-color;
+                  }
+               }
+               // margin: 0.3rem 0;
+            }
+         }
+
+         .footer-social {
+            .footer-links {
+               flex-direction: row;
+               gap: 1rem;
+
+               .icon {
+                  font-size: 1.5rem;
+                  cursor: pointer;
+                  @include easeOut();
+
+                  &:hover {
+                     color: $secondary-color;
+                  }
+               }
+            }
+         }
+
+         .footer-payments {
+            .footer-links {
+               flex-direction: row;
+               gap: 1rem;
+
+               .icon {
+                  font-size: 1.5rem;
+
+                  cursor: pointer;
+                  @include easeOut();
+
+                  &:hover {
+                     color: $secondary-color;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

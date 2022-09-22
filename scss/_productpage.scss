@@ -1,0 +1,104 @@
+.product-page {
+   position: relative;
+   .product-showcase {
+      background-color: $white-color;
+      color: $primary-color;
+
+      .wrapper {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         flex-wrap: wrap-reverse;
+         width: 100%;
+         gap: 1rem;
+         text-transform: capitalize;
+
+         .details {
+            .btn {
+               width: 100%;
+            }
+
+            h5 {
+               text-transform: capitalize;
+            }
+
+            .rating {
+               span {
+                  i {
+                     font-size: 1.2rem;
+                  }
+               }
+            }
+         }
+
+         .img {
+            width: 300px;
+            height: 300px;
+
+            img {
+               width: 100%;
+               height: 100%;
+               border-radius: 100%;
+               object-fit: cover;
+               border: 2px solid $primary-color;
+               background-color: $white-color;
+               @include easeOut();
+            }
+         }
+      }
+
+      .btns {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         gap: 2rem;
+
+         .btn {
+            flex-grow: 1;
+         }
+      }
+   }
+
+   .product-description {
+      background-color: $primary-color;
+      color: $white-color;
+
+      h4 {
+         text-transform: uppercase;
+      }
+   }
+
+   .product-review {
+      background-color: $grey-color;
+      color: $white-color;
+
+      .wrapper {
+         .review-boxes {
+            .box {
+               background-color: $primary-color;
+               position: relative;
+
+               .user {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+               }
+
+               .btn {
+                  position: absolute;
+                  top: 2%;
+                  right: 1%;
+                  transform: translate(-2%, -1%);
+                  @include easeOut();
+
+                  &:hover {
+                     color: $danger-color;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

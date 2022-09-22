@@ -1,0 +1,38 @@
+.register-page {
+   .register-form {
+      .lead {
+         a {
+            color: $secondary-color;
+         }
+      }
+
+      form {
+         section {
+            h6 {
+               text-transform: uppercase;
+               color: $secondary-color;
+            }
+            div {
+               input,
+               section {
+                  border: 1px solid $primary-color;
+                  @include easeOut();
+
+                  &:focus {
+                     border: 1px solid $secondary-color;
+                  }
+               }
+
+               select {
+                  border: 1px solid $primary-color;
+               }
+            }
+         }
+      }
+   }
+   p {
+      span {
+         cursor: pointer;
+      }
+   }
+}
