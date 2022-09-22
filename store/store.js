@@ -1,6 +1,6 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
+// import { composeWithDevTools } from 'redux-devtools-extension';
 import { createWrapper } from 'next-redux-wrapper';
 import {
    changeLoginReducer,
@@ -58,7 +58,7 @@ const userToken =
       : null;
 
 // initial states here
-const initalState = {
+const initialState = {
    login: { user: userData, token: userToken },
    register: { user: userData, token: userToken },
 };
@@ -66,13 +66,19 @@ const initalState = {
 // middleware
 const middleware = [thunk];
 
-// creating store
+// // creating store
+// export const store = createStore(
+//    reducer,
+//    initialState,
+//    composeWithDevTools(applyMiddleware(...middleware))
+// );
+
+// For Production
 export const store = createStore(
    reducer,
-   initalState,
-   composeWithDevTools(applyMiddleware(...middleware))
+   initialState,
+   compose(applyMiddleware(...middleware))
 );
-
 // assigning store to next wrapper
 const makeStore = () => store;
 
