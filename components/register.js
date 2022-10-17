@@ -1,5 +1,5 @@
-// import BackBtn from '../components/BackBtn';
-// import RegisterForm from '../components/RegisterpageComponents/RegisterForm';
+// import BackBtn from './BackBtn';
+// import RegisterForm from './RegisterpageComponents/RegisterForm';
 
 // export default function Home() {
 //    return (
